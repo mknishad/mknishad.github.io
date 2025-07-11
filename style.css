@@ -50,7 +50,7 @@ section h2 {
 }
 
 #about p {
-  text-align:justify;
+  text-align: justify;
 }
 
 .education,
@@ -240,6 +240,7 @@ nav a:hover::after {
     opacity: 0;
     transform: translateY(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -250,6 +251,7 @@ nav a:hover::after {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -265,8 +267,10 @@ nav a:hover::after {
   padding-right: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem; /* Slightly more breathing room */
-  font-size: 1rem; /* Slightly bigger for readability */
+  gap: 1.5rem;
+  /* Slightly more breathing room */
+  font-size: 1rem;
+  /* Slightly bigger for readability */
   color: var(--text-secondary, #444);
   line-height: 1.5;
 }
@@ -276,11 +280,9 @@ nav a:hover::after {
   padding: 1.2rem 1.5rem;
   border-left: 5px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(
-    180deg,
-    var(--accent-start, #4facfe),
-    var(--accent-end, #00f2fe)
-  );
+  border-image-source: linear-gradient(180deg,
+      var(--accent-start, #4facfe),
+      var(--accent-end, #00f2fe));
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease,
@@ -291,11 +293,9 @@ nav a:hover::after {
 .skills-list li:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-  border-image-source: linear-gradient(
-    180deg,
-    var(--accent-hover-start, #46bde5),
-    var(--accent-hover-end, #54bfe3)
-  );
+  border-image-source: linear-gradient(180deg,
+      var(--accent-hover-start, #46bde5),
+      var(--accent-hover-end, #54bfe3));
 }
 
 .skills-list strong {
@@ -335,7 +335,8 @@ nav a:hover::after {
   gap: 1.5rem;
   background: #ffffff;
   padding: 1.5rem 2rem;
-  border-left: 5px solid #46bde5; /* Indigo-600 */
+  border-left: 5px solid #46bde5;
+  /* Indigo-600 */
   border-radius: 14px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   margin-bottom: 1.8rem;
@@ -352,7 +353,8 @@ nav a:hover::after {
   height: 60px;
   object-fit: cover;
   border-radius: 12px;
-  border: 2px solid #e5e7eb; /* light border */
+  border: 2px solid #e5e7eb;
+  /* light border */
   background-color: #f3f4f6;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   flex-shrink: 0;
@@ -399,10 +401,12 @@ nav a:hover::after {
 
 /*Hire me on upwork*/
 #hire-me {
-  background-color: #e0f2eb; /* lighter green background */
+  background-color: #e0f2eb;
+  /* lighter green background */
   border-radius: 12px;
   padding: 1rem 1.5rem;
   margin-top: 2rem;
+  margin-bottom: 0;
   text-align: center;
   box-shadow: 0 4px 12px rgba(29, 191, 115, 0.3);
 }
@@ -410,7 +414,8 @@ nav a:hover::after {
 #hire-me h2 {
   font-size: 2rem;
   margin-bottom: 0.8rem;
-  color: #007c19; /* Upwork deep green */
+  color: #007c19;
+  /* Upwork deep green */
   font-weight: 700;
   text-align: center;
 }
@@ -424,7 +429,8 @@ nav a:hover::after {
 
 .btn-upwork {
   display: inline-block;
-  background-color: #007c19; /* Upwork deep green */
+  background-color: #007c19;
+  /* Upwork deep green */
   color: white;
   font-weight: 600;
   padding: 0.75rem 2rem;
@@ -437,15 +443,18 @@ nav a:hover::after {
 }
 
 .btn-upwork:hover {
-  background-color: #159954; /* darker green on hover */
+  background-color: #159954;
+  /* darker green on hover */
   box-shadow: 0 6px 20px rgba(21, 153, 84, 0.7);
 }
 
 /*Article*/
 /* Article Section */
 #article-slider-section {
-  max-width: 1200px; /* wider view */
-  margin: 4rem auto; /* more vertical space */
+  max-width: 1200px;
+  /* wider view */
+  margin: 4rem auto;
+  /* more vertical space */
   padding: 0 2rem;
   position: relative;
   font-family: Arial, sans-serif;
@@ -463,14 +472,17 @@ nav a:hover::after {
 .article-slider-wrapper {
   overflow-x: auto;
   scroll-behavior: smooth;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   margin-bottom: 2rem;
   padding: 2rem;
 }
 
 .article-slider-wrapper::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 
 .article-slider {
@@ -479,7 +491,8 @@ nav a:hover::after {
 }
 
 .article {
-  flex: 0 0 19%; /* narrower cards */
+  flex: 0 0 19%;
+  /* narrower cards */
   background: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -499,7 +512,8 @@ nav a:hover::after {
 .article img {
   width: 100%;
   height: 180px;
-  object-fit: cover; /* Fills area while maintaining aspect ratio and cropping excess */
+  object-fit: cover;
+  /* Fills area while maintaining aspect ratio and cropping excess */
   border-radius: 8px;
   margin-bottom: 1rem;
   display: block;
@@ -538,7 +552,8 @@ nav a:hover::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #27ae60; /* Upwork green */
+  background-color: #27ae60;
+  /* Upwork green */
   color: white;
   border: none;
   border-radius: 50%;
@@ -580,13 +595,15 @@ nav a:hover::after {
 /* Responsive Breakpoints */
 @media (max-width: 900px) {
   .article {
-    flex: 0 0 calc((100% / 2) - 0.75rem); /* 2 articles on medium screens */
+    flex: 0 0 calc((100% / 2) - 0.75rem);
+    /* 2 articles on medium screens */
   }
 }
 
 @media (max-width: 600px) {
   .article {
-    flex: 0 0 90%; /* 1 article on small screens */
+    flex: 0 0 90%;
+    /* 1 article on small screens */
   }
 }
 
@@ -758,9 +775,11 @@ body {
 
 .project-link {
   text-decoration: none;
-  color: inherit; /* Keeps the original color */
+  color: inherit;
+  /* Keeps the original color */
 }
 
 .project-link:hover {
-  opacity: 0.85; /* Optional: subtle hover effect */
+  opacity: 0.85;
+  /* Optional: subtle hover effect */
 }
