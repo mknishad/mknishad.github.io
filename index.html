@@ -1,27 +1,424 @@
 <!DOCTYPE html>
-<html>
-  	<head>
-    	<meta charset="utf-8">
-    	<script src="view.js"></script>
-    	<link rel="stylesheet" href="style.css">
-    	<title>Monir Hossain</title>
-  	</head>
-  	<body>
-		<div class="box">
-			<div class="crop">
-  				<img src="nishad.jpg" alt="">
-  			</div>
-  			<h1>Monir Hossain</h1>
-			<h5>Software Engineer</h5>
-			<p>A passionate programmer and tech enthusiast.</p>
-			<p><b>Specialties: </b>Android, Java.</p>
-			<ul>
-				<li><a href="https://github.com/mknishad"  target="blank"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monir Hossain | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/appgrid.css" />
+</head>
+
+<body>
+  <header>
+    <img src="monir.png" alt="Monir Hossain" />
+    <h1>Monir Hossain</h1>
+    <p>Software Engineer (Android)</p>
+  </header>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm a flexible and results-driven Senior Android Engineer
+        with over 6 years of experience in designing, developing, and optimizing
+        high-performance mobile applications. My passion lies in delivering seamless
+        user experiences and building scalable, secure applications.
+      </p>
+      <p>
+        Throughout my career, I've led the development of complex Android applications,
+        including a GDPR-compliant telehealth and well-being application (eDoktor)
+        involving secure video consultations, and contributed significantly to a major
+        eCommerce platform (Dhamaka Shopping) with a focus on real-time data and payment
+        gateway integrations. I've also worked on SDKs for financial services (shurjoPay)
+        and Learning Management Systems (Retina LMS).
+      </p>
+      <p>
+        I possess expertise in the Android SDK, Android Architecture Components, Kotlin,
+        and Jetpack Compose. My architectural approach leans towards MVVM, Clean Architecture,
+        and Modular Design, always adhering to SOLID Principles. I'm proficient with a wide
+        array of libraries and tools, including REST, Retrofit, LiveData, Flow, Kotlin
+        Coroutines, Room, Realm, GraphQL, WebSocket, Dagger, Hilt, WorkManager, and Firebase.
+      </p>
+      <p>
+        Beyond development, I'm a regular participant in online competitive programming
+        competitions and have actively participated in several onsite national and international
+        programming contests, honing my problem-solving skills and understanding of Data
+        Structures & Algorithms. I thrive in agile environments, embracing Scrum methodologies
+        and the collaborative spirit of pair programming.
+      </p>
+      <p>
+        I am dedicated to continuous learning and eager to leverage my skills to create
+        innovative and impactful mobile solutions.
+      </p>
+    </section>
+    <section id="experience">
+      <h2>Education</h2>
+      <div class="experience">
+        <img src="images/jahangirnagar.png" alt="Jahangirnagar University Logo" />
+        <div class="experience-details">
+          <h3>Master of Science in Computer Science & Engineering</h3>
+          <p><i>Jahangirnagar University | Jan 2018 - Apr 2019</i></p>
+        </div>
+      </div>
+      <div class="experience">
+        <img src="images/northern.jpg" alt="Northern University Bangladesh Logo" />
+        <div class="experience-details">
+          <h3>Bachelor of Science in Computer Science & Engineering</h3>
+          <p><i>Northern University Bangladesh | Sep 2012 - Aug 2016</i></p>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <div class="experience">
+        <img src="images/northprim.jpeg" alt="Northprim Logo" />
+        <div class="experience-details">
+          <h3>Senior Android Engineer - Northprim</h3>
+          <p><i>Stockholm, Sweden (Remote) | June 2023 - Present</i></p>
+          <p>
+          <ul>
+            <li>
+              Led the development of eDoktor, a GDPR-compliant telehealth and well-being application,
+              ensuring secure video consultations.
+            </li>
+            <li>
+              Increased user engagement by 80%, improving UI/UX, optimizing performance, and
+              implementing new features based on user feedback.
+            </li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      <div class="experience">
+        <img src="images/durbinLabs.jpeg" alt="Durbin Labs Limited Logo" />
+        <div class="experience-details">
+          <h3>Senior Software Engineer (Android) - Durbin Labs Limited</h3>
+          <p><i>Dhaka, Bangladesh | Feb 2022 - May 2023</i></p>
+          <p>
+          <ul>
+            <li>
+              Developed Retina LMS, a learning management system for the students of Retina, enabling
+              thousands of students to enroll, study, take exams, and track progress.
+            </li>
+            <li>
+              Built Doktor Dekhao, a telemedicine app with features like doctor consultations, medicine
+              reminders, and BMI tracking.
+            </li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      <div class="experience">
+        <img src="images/shurjomukhi.png" alt="Shurjomukhi Limited Logo" />
+        <div class="experience-details">
+          <h3>Senior Android Developer - Shurjomukhi Limited</h3>
+          <p><i>Dhaka, Bangladesh | Mar 2020 - Jan 2022</i></p>
+          <p>
+          <ul>
+            <li>
+              Led a team in developing the shurjoPay Android and Flutter SDK, those were used by
+              thousands of client apps to seamlessly integrate shurjoPay payment gateway.
+            </li>
+            <li>
+              Developed the Hatekhori (Bangla Alphabet, Numbers, Conjuncts) educational apps,
+              helping more than 1 million children worldwide learn the Bangla alphabet, numbers,
+              and conjuncts, ensuring COPPA compliance.
+            </li>
+            <li>
+              Built praniSheba, an IoT-based cattle health monitoring system leveraging machine
+              learning for unique cow identification.
+            </li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      <div class="experience">
+        <img src="images/microtrade.webp" alt="Microtrade Group Logo" />
+        <div class="experience-details">
+          <h3>Android Developer - Microtrade Group</h3>
+          <p><i>Dhaka, Bangladesh | Jan 2018 - Feb 2020</i></p>
+          <p>
+          <ul>
+            <li>
+              Developed Buddy, a ride-sharing app allowing multiple users to share rides efficiently.
+            </li>
+            <li>
+              Built Dhamaka Shopping, an eCommerce platform serving thousands of users.
+            </li>
+          </ul>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>
+          <strong>Mobile Development</strong> Android SDK, Android Architecture Components, Jetpack Compose,
+          Flutter, Material Design
+        </li>
+        <li>
+          <strong>Libraries & Tools</strong> REST, Retrofit, LiveData, Flow, Kotlin Coroutines, Room, Realm,
+          GraphQL, WebSocket, Meteor, CameraX, OCR, Dagger, Hilt, WorkManager, Gradle, Provider, Riverpod, Firebase
+        </li>
+        <li>
+          <strong>Data Persistance</strong> DataStore, SharedPreferences, SQLite, Room, Realm, MySQL,
+          Firebase Realtime Database, Cloud Firestore
+        </li>
+        <li>
+          <strong>Languages</strong> Kotlin, Java, Python, Dart, C++, C
+        </li>
+        <li>
+          <strong>Architectures</strong> Clean Architecture, MVVM, MVI, Modular Architecture, SOLID Principles
+        </li>
+        <li>
+          <strong>Version Control</strong> Git, GitHub, GitLab, Bitbucket, Git Flow, Code Review
+        </li>
+        <li>
+          <strong>Testing & CI/CD</strong> JUnit, Espresso, Appium, GitHub Actions
+        </li>
+        <li>
+          <strong>Soft Skills & Project Management</strong> Scrum, Agile, Jira, Cross-functional Collaboration,
+          Technical Documentation, Mentorship
+        </li>
+        <li>
+          <strong>Others</strong> Data Structures & Algorithms, Problem Solving, Pair Programming
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Apps</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <a href="https://play.google.com/store/apps/details?id=com.edoktor.patient" target="_blank"
+            class="project-link">
+            <img src="images/apps/edoktor.png" alt="eDoktor App" />
+            <h3>eDoktor</h3>
+          </a>
+          <p>
+            eDoktor is a telehealth and well-being app that adheres to GDPR regulations, providing secure video
+            consultations.
+          </p>
+        </div>
+        <div class="project-card">
+          <a href="https://play.google.com/store/apps/details?id=com.retinalms" target="_blank" class="project-link">
+            <img src="images/apps/retina.jpeg" alt="Retina LMS" />
+            <h3>Retina LMS</h3>
+          </a>
+          <p>
+            Retina is a prominent coaching center in Bangladesh, primarily focused
+            on preparing students for medical and dental admission tests.
+          </p>
+        </div>
+        <div class="project-card">
+          <a href="https://www.facebook.com/doctordekhao/" target="_blank" class="project-link">
+            <img src="images/apps/dd.png" alt="Doctor Dekhao" />
+            <h3>Doctor Dekhao</h3>
+          </a>
+          <p>
+            An online healthcare platform connects patients with certified doctors,
+            enabling them to schedule appointments, receive consultations, and monitor
+            their health from anywhere.
+          </p>
+        </div>
+        <div class="project-card">
+          <a href="https://shurjopay.com.bd" target="_blank" class="project-link">
+            <img src="images/apps/shurjopay.jpeg" alt="ShurjoPay" />
+            <h3>ShurjoPay</h3>
+          </a>
+          <p>
+            <!-- ShurjoPay, founded in 2010, is Bangladesh`s first online payment gateway. 
+              It connects bank accounts to platforms for money transfers and MFSs, acting 
+              as an aggregator between merchants and payment services. -->
+
+            Established in 2010, ShurjoPay is Bangladesh`s first online payment gateway.
+            It connects bank accounts to various platforms, enabling money transfers and
+            mobile money services.
+          </p>
+        </div>
+        <div class="project-card">
+          <a href="https://www.facebook.com/hatekhoriapp/" target="_blank" class="project-link">
+            <img src="images/apps/hatekhori.png" alt="Hatekhori" />
+            <h3>Hatekhori</h3>
+          </a>
+          <p>
+            Hatekhori, an educational application, aids users in learning the Bangla alphabet.
+            It offers an interactive platform for both children and adults to engage with the language.
+          </p>
+        </div>
+        <div class="project-card">
+          <a href="https://www.pranisheba.com.bd" target="_blank" class="project-link">
+            <img src="images/apps/pranisheba.png" alt="PraniSheba" />
+            <h3>PraniSheba</h3>
+          </a>
+          <p>
+            PraniSheba, an IoT-based cattle health monitoring system, utilizes machine learning to uniquely identify
+            cows.
+          </p>
+        </div>
+        <div class="project-card">
+          <a href="https://www.facebook.com/buddyrideshare/" target="_blank" class="project-link">
+            <img src="images/apps/buddy.png" alt="Buddy" />
+            <h3>Buddy</h3>
+          </a>
+          <p>
+            Buddy is a ride-sharing app that enables multiple users to share rides conveniently.
+          </p>
+        </div>
+        <div class="project-card">
+          <a href="https://www.facebook.com/DhamakaOfficial/" target="_blank" class="project-link">
+            <img src="images/apps/dhamaka.png" alt="Dhamaka" />
+            <h3>Dhamaka</h3>
+          </a>
+          <p>
+            Dhamaka, a unique e-commerce platform in Bangladesh, offers a wide range of products
+            at convenient prices and exclusive discounts.
+          </p>
+        </div>
+        <div class="project-card">
+          <a href="https://www.facebook.com/tripuptech" target="_blank" class="project-link">
+            <img src="images/apps/tripup.jpg" alt="Trip Up" />
+            <h3>TripUp</h3>
+          </a>
+          <p>
+            TripUp provides online short-term rental options for rooms, flats, hotels, resorts, and boats.
+          </p>
+        </div>
+        <div class="project-card">
+          <a href="https://play.google.com/store/apps/details?id=com.monir.expensetracker" target="_blank"
+            class="project-link">
+            <img src="images/apps/eexpense.png" alt="eExpense" />
+            <h3>eExpense</h3>
+          </a>
+          <p>
+            eExpense is a user-friendly application that simplifies the process of tracking daily expenses.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="article-slider-section">
+        <h2>Articles</h2>
+        <div class="article-slider-wrapper">
+          <div class="article-slider">
+            <div class="article">
+              <img src="images/solid.png" alt="SOLID Principle" />
+              <h3>SOLID Principle Example with Swift</h3>
+              <p>
+                The SOLID principle is key to writing clean, maintainable code.
+                This article explains each principle with clear Swift
+                examples—both good and bad.
+                <a
+                  href="https://medium.com/@mazharul.belal/solid-principle-example-with-swift-96fa5a3ed400"
+                  target="_blank"
+                  >Read full article</a
+                >
+              </p>
+            </div>
+            <div class="article">
+              <img src="images/unit.png" alt="Unit Testing" />
+              <h3>Unit Testing in Swift</h3>
+              <p>
+                Unit testing helps verify that small parts of your Swift code
+                work as expected. This article uses a simple app,
+                <em>EasyCalculator</em>, to demonstrate basic testing with
+                XCTest.
+                <a
+                  href="https://medium.com/@mazharul.belal/what-is-unit-testing-in-swift-26bb932d8fb4"
+                  target="_blank"
+                  >Read full article</a
+                >
+              </p>
+            </div>
+            <div class="article">
+              <img src="images/closurs.png" alt="Closures in Swift" />
+              <h3>Understanding Closures in Swift</h3>
+              <p>
+                Closures are an important feature in Swift. They can be used as
+                variables, function return types, and function parameters.
+                <a
+                  href="https://medium.com/@mazharul.belal/understanding-closures-in-swift-9a418818d452"
+                  target="_blank"
+                  >Read full article</a
+                >
+              </p>
+            </div>
+
+            <div class="article">
+              <img src="images/sc.png" alt="Static vs class variable swift" />
+              <h3>static vs class variable swift</h3>
+              <p>
+                In Swift, we use static and class to define properties and
+                methods that belong to the type itself. This means you canaccess
+                them without creating an instance of the class or struct.
+                <a
+                  href="https://medium.com/@mazharul.belal/static-vs-class-variable-swift-9a887d98f13e"
+                  target="_blank"
+                  >Read full article</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <button id="btn-prev-article" aria-label="Previous Article" disabled>
+        </button>
+        <button id="btn-next-article" aria-label="Next Article">
+        </button>
+      </section> -->
+
+    <section id="hire-me">
+      <h2>Hire me on Upwork</h2>
+      <p>
+        I am committed to delivering high-quality Android applications. If you are looking for a
+        highly experienced and reliable Android developer to bring your app vision to life, please visit my
+        Upwork profile. I am eager to collaborate with you and build exceptional applications.
+      </p>
+      <a href="https://www.upwork.com/freelancers/~01d1695dbde3b01bf1" target="_blank" rel="noopener noreferrer"
+        class="btn-upwork">
+        Visit My Upwork Profile
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <!-- <section id="contact-section"> -->
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <a href="mailto:mknishad1@ymail.com" class="contact-link" target="_blank" rel="noopener">
+          <img src="images/Apps/mail.png" alt="Email Icon" />
+          <span>Email</span>
+        </a>
+        <a href="https://wa.me/8801670745042" class="contact-link" target="_blank" rel="noopener">
+          <img src="images/Apps/whatsapp.png" alt="WhatsApp Icon" />
+          <span>WhatsApp</span>
+        </a>
+        <a href="https://www.linkedin.com/in/mknishad/" class="contact-link" target="_blank" rel="noopener">
+          <img src="images/Apps/linkedin.png" alt="LinkedIn Icon" />
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://leetcode.com/u/mknishad/" class="contact-link" target="_blank" rel="noopener">
+          <img src="images/Apps/leetcode.webp" alt="LeetCode Icon" />
+          <span>LeetCode</span>
+        </a>
+        <a href="https://www.hackerrank.com/profile/mknishad" class="contact-link" target="_blank" rel="noopener">
+          <img src="images/Apps/hackerrank.png" alt="HackerRank Icon" />
+          <span>HackerRank</span>
+        </a>
+        <a href="https://codeforces.com/profile/mknishad" class="contact-link" target="_blank" rel="noopener">
+          <img src="images/Apps/codeforces.png" alt="Codeforces Icon" />
+          <span>Codeforces</span>
+        </a>
+      </div>
+      <p class="copyright">&copy; 2025 Monir Hossain</p>
+    <!-- </section> -->
+  </footer>
+
+  <!-- <script src="js/articles-slider.js" defer></script> -->
 </body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
 </html>
