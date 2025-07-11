@@ -1,17 +1,17 @@
-html { 
-  background: url("bg.jpg") no-repeat center center fixed; 
+/* html { 
+  height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
-  background-color: #f5f5f7;
-  /* color: #1c1c1e; */
+  background-color: #47ebed;
+  color: #1c1c1e;
 }
 
 header img {
@@ -84,7 +84,7 @@ section h2 {
   --accent: #16a085;
   --text: #2c3e50;
   --background: #f8f9fa;
-  --gradient: linear-gradient(135deg, #1a1a2e 0%, #16222a 100%);
+  --gradient: linear-gradient(135deg, #173744 0%, #192b30 100%);
 }
 
 body {
@@ -122,6 +122,15 @@ header p {
   opacity: 0;
   animation: fadeIn 1s ease-out forwards;
   animation-delay: 0.5s;
+}
+
+footer {
+  background: var(--gradient);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Glass-morphism Navigation */
@@ -284,8 +293,8 @@ nav a:hover::after {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
   border-image-source: linear-gradient(
     180deg,
-    var(--accent-hover-start, #43e97b),
-    var(--accent-hover-end, #38f9d7)
+    var(--accent-hover-start, #46bde5),
+    var(--accent-hover-end, #54bfe3)
   );
 }
 
@@ -326,7 +335,7 @@ nav a:hover::after {
   gap: 1.5rem;
   background: #ffffff;
   padding: 1.5rem 2rem;
-  border-left: 5px solid #4f46e5; /* Indigo-600 */
+  border-left: 5px solid #46bde5; /* Indigo-600 */
   border-radius: 14px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   margin-bottom: 1.8rem;
@@ -392,8 +401,8 @@ nav a:hover::after {
 #hire-me {
   background-color: #e0f2eb; /* lighter green background */
   border-radius: 12px;
-  padding: 2rem 1.5rem;
-  margin-top: 3rem;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(29, 191, 115, 0.3);
 }
@@ -401,7 +410,7 @@ nav a:hover::after {
 #hire-me h2 {
   font-size: 2rem;
   margin-bottom: 0.8rem;
-  color: #1dbf73; /* Upwork deep green */
+  color: #007c19; /* Upwork deep green */
   font-weight: 700;
   text-align: center;
 }
@@ -410,14 +419,16 @@ nav a:hover::after {
   font-size: 1rem;
   color: #2f2f2f;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .btn-upwork {
   display: inline-block;
-  background-color: #1dbf73; /* Upwork deep green */
+  background-color: #007c19; /* Upwork deep green */
   color: white;
   font-weight: 600;
   padding: 0.75rem 2rem;
+  margin-bottom: 1.5rem;
   border-radius: 30px;
   text-decoration: none;
   font-size: 1.1rem;
@@ -594,8 +605,8 @@ body {
 /* Section Container */
 #projects {
   max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 1rem;
+  margin: 1rem auto;
+  padding: 1rem 1rem;
 }
 
 #projects h2 {
@@ -612,7 +623,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 2rem;
   padding: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 /* App Card */

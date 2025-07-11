@@ -1,12 +1,12 @@
 /* appgrid.css – App Store Style Grid */
 
-body {
+/* body {
   font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Arial,
     sans-serif;
   background-color: #f9f9f9;
   margin: 0;
   padding: 2rem;
-}
+} */
 
 #app-store-section {
   max-width: 1000px;
