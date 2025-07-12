@@ -49,6 +49,11 @@ section h2 {
   margin-bottom: 1rem;
 }
 
+#about {
+  border-left: 5px solid #46bde5;
+  padding: 1.5rem;
+}
+
 #about p {
   text-align: justify;
 }
