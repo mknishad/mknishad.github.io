@@ -1,428 +1,547 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Monir Hossain | Portfolio</title>
+  <meta name="description"
+    content="Monir Hossain — Senior Android Engineer with 8+ years building high-performance, scalable mobile apps in Kotlin, Jetpack Compose & Flutter." />
+  <meta name="theme-color" content="#07070b" />
+  <title>Monir Hossain — Android Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="css/appgrid.css" />
 </head>
 
 <body>
-  <header>
-    <img src="monir.png" alt="Monir Hossain" />
-    <h1>Monir Hossain</h1>
-    <p>Software Engineer (Android)</p>
+  <!-- Decorative background layers -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob blob--green"></span>
+    <span class="blob blob--purple"></span>
+    <span class="blob blob--cyan"></span>
+  </div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="logo" aria-label="Home">
+        <span class="logo__bracket">&lt;</span>MH<span class="logo__bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Stack</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Apps</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+          </svg>
+        </button>
+        <a href="https://www.upwork.com/freelancers/~01d1695dbde3b01bf1" target="_blank" rel="noopener"
+          class="btn btn--ghost nav__cta">Hire me</a>
+        <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
   </header>
+
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I'm a flexible and results-driven Senior Android Engineer
-        with over 6 years of experience in designing, developing, and optimizing
-        high-performance mobile applications. My passion lies in delivering seamless
-        user experiences and building scalable, secure applications.
-      </p>
-      <p>
-        Throughout my career, I've led the development of complex Android applications,
-        including a GDPR-compliant telehealth and well-being application (eDoktor)
-        involving secure video consultations, and contributed significantly to a major
-        eCommerce platform (Dhamaka Shopping) with a focus on real-time data and payment
-        gateway integrations. I've also worked on SDKs for financial services (shurjoPay)
-        and Learning Management Systems (Retina LMS).
-      </p>
-      <p>
-        I possess expertise in the Android SDK, Android Architecture Components, Kotlin,
-        and Jetpack Compose. My architectural approach leans towards MVVM, Clean Architecture,
-        and Modular Design, always adhering to SOLID Principles. I'm proficient with a wide
-        array of libraries and tools, including REST, Retrofit, LiveData, Flow, Kotlin
-        Coroutines, Room, Realm, GraphQL, WebSocket, Dagger, Hilt, WorkManager, and Firebase.
-      </p>
-      <p>
-        Beyond development, I'm a regular participant in online competitive programming
-        competitions and have actively participated in several onsite national and international
-        programming contests, honing my problem-solving skills and understanding of Data
-        Structures & Algorithms. I thrive in agile environments, embracing Scrum methodologies
-        and the collaborative spirit of pair programming.
-      </p>
-      <p>
-        I am dedicated to continuous learning and eager to leverage my skills to create
-        innovative and impactful mobile solutions.
-      </p>
-    </section>
-    <section id="experience">
-      <h2>Education</h2>
-      <div class="experience">
-        <img src="images/jahangirnagar.png" alt="Jahangirnagar University Logo" />
-        <div class="experience-details">
-          <h3>Master of Science in Computer Science & Engineering</h3>
-          <p><i>Jahangirnagar University | Jan 2018 - Apr 2019</i></p>
-        </div>
-      </div>
-      <div class="experience">
-        <img src="images/northern.jpg" alt="Northern University Bangladesh Logo" />
-        <div class="experience-details">
-          <h3>Bachelor of Science in Computer Science & Engineering</h3>
-          <p><i>Northern University Bangladesh | Sep 2012 - Aug 2016</i></p>
-        </div>
-      </div>
-    </section>
-    <section id="experience">
-      <h2>Work Experience</h2>
-      <div class="experience">
-        <img src="images/northprim.jpeg" alt="Northprim Logo" />
-        <div class="experience-details">
-          <h3>Senior Android Engineer - Northprim</h3>
-          <p><i>Stockholm, Sweden (Remote) | June 2023 - Present</i></p>
-          <p>
-          <ul>
-            <li>
-              Led the development of eDoktor, a GDPR-compliant telehealth and well-being application,
-              ensuring secure video consultations.
-            </li>
-            <li>
-              Increased user engagement by 80%, improving UI/UX, optimizing performance, and
-              implementing new features based on user feedback.
-            </li>
-          </ul>
-          </p>
-        </div>
-      </div>
-      <div class="experience">
-        <img src="images/durbinLabs.jpeg" alt="Durbin Labs Limited Logo" />
-        <div class="experience-details">
-          <h3>Senior Software Engineer (Android) - Durbin Labs Limited</h3>
-          <p><i>Dhaka, Bangladesh | Feb 2022 - May 2023</i></p>
-          <p>
-          <ul>
-            <li>
-              Developed Retina LMS, a learning management system for the students of Retina, enabling
-              thousands of students to enroll, study, take exams, and track progress.
-            </li>
-            <li>
-              Built Doktor Dekhao, a telemedicine app with features like doctor consultations, medicine
-              reminders, and BMI tracking.
-            </li>
-          </ul>
-          </p>
-        </div>
-      </div>
-      <div class="experience">
-        <img src="images/shurjomukhi.png" alt="Shurjomukhi Limited Logo" />
-        <div class="experience-details">
-          <h3>Android Developer - Shurjomukhi Limited</h3>
-          <p><i>Dhaka, Bangladesh | Mar 2020 - Jan 2022</i></p>
-          <p>
-          <ul>
-            <li>
-              Led a team in developing the shurjoPay Android and Flutter SDK, those were used by
-              thousands of client apps to seamlessly integrate shurjoPay payment gateway.
-            </li>
-            <li>
-              Developed the Hatekhori (Bangla Alphabet, Numbers, Conjuncts) educational apps,
-              helping more than 1 million children worldwide learn the Bangla alphabet, numbers,
-              and conjuncts, ensuring COPPA compliance.
-            </li>
-            <li>
-              Built praniSheba, an IoT-based cattle health monitoring system leveraging machine
-              learning for unique cow identification.
-            </li>
-          </ul>
-          </p>
-        </div>
-      </div>
-      <div class="experience">
-        <img src="images/microtrade.webp" alt="Microtrade Group Logo" />
-        <div class="experience-details">
-          <h3>Android Developer - Microtrade Group</h3>
-          <p><i>Dhaka, Bangladesh | Jan 2018 - Feb 2020</i></p>
-          <p>
-          <ul>
-            <li>
-              Developed Buddy, a ride-sharing app allowing multiple users to share rides efficiently.
-            </li>
-            <li>
-              Built Dhamaka Shopping, an eCommerce platform serving thousands of users.
-            </li>
-          </ul>
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>
-          <strong>Mobile Development</strong> Android SDK, Android Architecture Components, Jetpack Compose,
-          Flutter, Material Design
-        </li>
-        <li>
-          <strong>Libraries & Tools</strong> REST, Retrofit, LiveData, Flow, Kotlin Coroutines, Room, Realm,
-          GraphQL, WebSocket, Meteor, CameraX, OCR, Dagger, Hilt, WorkManager, Gradle, Provider, Riverpod, Firebase
-        </li>
-        <li>
-          <strong>Data Persistance</strong> DataStore, SharedPreferences, SQLite, Room, Realm, MySQL,
-          Firebase Realtime Database, Cloud Firestore
-        </li>
-        <li>
-          <strong>Languages</strong> Kotlin, Java, Python, Dart, C++, C
-        </li>
-        <li>
-          <strong>Architectures</strong> Clean Architecture, MVVM, MVI, Modular Architecture, SOLID Principles
-        </li>
-        <li>
-          <strong>Version Control</strong> Git, GitHub, GitLab, Bitbucket, Git Flow, Code Review
-        </li>
-        <li>
-          <strong>Testing & CI/CD</strong> JUnit, Espresso, Appium, GitHub Actions
-        </li>
-        <li>
-          <strong>Soft Skills & Project Management</strong> Scrum, Agile, Jira, Cross-functional Collaboration,
-          Technical Documentation, Mentorship
-        </li>
-        <li>
-          <strong>Others</strong> Data Structures & Algorithms, Problem Solving, Pair Programming
-        </li>
-      </ul>
-    </section>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero__content reveal" data-reveal>
+        <p class="hero__eyebrow"><span class="dot"></span> Available for new projects</p>
+        <h1 class="hero__title">
+          Hi, I'm <span class="grad-text">Monir Hossain</span>
+        </h1>
+        <h2 class="hero__role">
+          <span class="hero__role-static">I build</span>
+          <span class="typewriter" id="typewriter"></span><span class="caret">|</span>
+        </h2>
+        <p class="hero__desc">
+          Senior Android Engineer with <strong>8+ years</strong> crafting high-performance,
+          scalable mobile apps. From GDPR-compliant telehealth to payment SDKs used by
+          thousands of apps — I turn ideas into polished products in
+          <span class="kw">Kotlin</span>, <span class="kw">Jetpack&nbsp;Compose</span> &amp;
+          <span class="kw">Flutter</span>.
+        </p>
 
-    <section id="projects">
-      <h2>Apps</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <a href="https://play.google.com/store/apps/details?id=com.edoktor.patient" target="_blank"
-            class="project-link">
-            <img src="images/Apps/edoktor-full.png" alt="eDoktor App" />
-            <h3>eDoktor</h3>
+        <div class="hero__cta">
+          <a href="#work" class="btn btn--primary">View my apps
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
           </a>
-          <p>
-            eDoktor is a telehealth and well-being app that adheres to GDPR regulations, providing secure video
-            consultations.
-          </p>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          <a href="Monir-Hossain-Resume.pdf"  target="_blank" download="Monir-Hossain-Resume.pdf" class="btn btn--outline">
+            Download CV
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
+            </svg>
+          </a>
         </div>
-        <div class="project-card">
-          <a href="https://play.google.com/store/apps/details?id=com.retinalms" target="_blank" class="project-link">
-            <img src="images/Apps/retina.jpeg" alt="Retina LMS" />
-            <h3>Retina LMS</h3>
-          </a>
-          <p>
-            Retina is a prominent coaching center in Bangladesh, primarily focused
-            on preparing students for medical and dental admission tests.
-          </p>
-        </div>
-        <div class="project-card">
-          <a href="https://www.facebook.com/doctordekhao/" target="_blank" class="project-link">
-            <img src="images/Apps/dd.png" alt="Doctor Dekhao" />
-            <h3>Doctor Dekhao</h3>
-          </a>
-          <p>
-            An online healthcare platform connects patients with certified doctors,
-            enabling them to schedule appointments, receive consultations, and monitor
-            their health from anywhere.
-          </p>
-        </div>
-        <div class="project-card">
-          <a href="https://shurjopay.com.bd" target="_blank" class="project-link">
-            <img src="images/Apps/shurjopay.jpeg" alt="ShurjoPay" />
-            <h3>ShurjoPay</h3>
-          </a>
-          <p>
-            <!-- ShurjoPay, founded in 2010, is Bangladesh`s first online payment gateway. 
-              It connects bank accounts to platforms for money transfers and MFSs, acting 
-              as an aggregator between merchants and payment services. -->
 
-            Established in 2010, ShurjoPay is Bangladesh`s first online payment gateway.
-            It connects bank accounts to various platforms, enabling money transfers and
-            mobile money services.
-          </p>
-        </div>
-        <div class="project-card">
-          <a href="https://www.facebook.com/hatekhoriapp/" target="_blank" class="project-link">
-            <img src="images/Apps/hatekhori.png" alt="Hatekhori" />
-            <h3>Hatekhori</h3>
-          </a>
-          <p>
-            Hatekhori, an educational application, aids users in learning the Bangla alphabet.
-            It offers an interactive platform for both children and adults to engage with the language.
-          </p>
-        </div>
-        <div class="project-card">
-          <a href="https://www.pranisheba.com.bd" target="_blank" class="project-link">
-            <img src="images/Apps/pranisheba.png" alt="PraniSheba" />
-            <h3>PraniSheba</h3>
-          </a>
-          <p>
-            PraniSheba, an IoT-based cattle health monitoring system, utilizes machine learning to uniquely identify
-            cows.
-          </p>
-        </div>
-        <div class="project-card">
-          <a href="https://www.facebook.com/buddyrideshare/" target="_blank" class="project-link">
-            <img src="images/Apps/buddy.png" alt="Buddy" />
-            <h3>Buddy</h3>
-          </a>
-          <p>
-            Buddy is a ride-sharing app that enables multiple users to share rides conveniently.
-          </p>
-        </div>
-        <div class="project-card">
-          <a href="https://www.facebook.com/DhamakaOfficial/" target="_blank" class="project-link">
-            <img src="images/Apps/dhamaka.png" alt="Dhamaka" />
-            <h3>Dhamaka</h3>
-          </a>
-          <p>
-            Dhamaka, a unique e-commerce platform in Bangladesh, offers a wide range of products
-            at convenient prices and exclusive discounts.
-          </p>
-        </div>
-        <div class="project-card">
-          <a href="https://www.facebook.com/tripuptech" target="_blank" class="project-link">
-            <img src="images/Apps/tripup.jpg" alt="Trip Up" />
-            <h3>TripUp</h3>
-          </a>
-          <p>
-            TripUp provides online short-term rental options for rooms, flats, hotels, resorts, and boats.
-          </p>
-        </div>
-        <div class="project-card">
-          <a href="https://play.google.com/store/apps/details?id=com.monir.expensetracker" target="_blank"
-            class="project-link">
-            <img src="images/Apps/eexpense.png" alt="eExpense" />
-            <h3>eExpense</h3>
-          </a>
-          <p>
-            eExpense is a user-friendly application that simplifies the process of tracking daily expenses.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- <section id="article-slider-section">
-        <h2>Articles</h2>
-        <div class="article-slider-wrapper">
-          <div class="article-slider">
-            <div class="article">
-              <img src="images/solid.png" alt="SOLID Principle" />
-              <h3>SOLID Principle Example with Swift</h3>
-              <p>
-                The SOLID principle is key to writing clean, maintainable code.
-                This article explains each principle with clear Swift
-                examples—both good and bad.
-                <a
-                  href="https://medium.com/@mazharul.belal/solid-principle-example-with-swift-96fa5a3ed400"
-                  target="_blank"
-                  >Read full article</a
-                >
-              </p>
-            </div>
-            <div class="article">
-              <img src="images/unit.png" alt="Unit Testing" />
-              <h3>Unit Testing in Swift</h3>
-              <p>
-                Unit testing helps verify that small parts of your Swift code
-                work as expected. This article uses a simple app,
-                <em>EasyCalculator</em>, to demonstrate basic testing with
-                XCTest.
-                <a
-                  href="https://medium.com/@mazharul.belal/what-is-unit-testing-in-swift-26bb932d8fb4"
-                  target="_blank"
-                  >Read full article</a
-                >
-              </p>
-            </div>
-            <div class="article">
-              <img src="images/closurs.png" alt="Closures in Swift" />
-              <h3>Understanding Closures in Swift</h3>
-              <p>
-                Closures are an important feature in Swift. They can be used as
-                variables, function return types, and function parameters.
-                <a
-                  href="https://medium.com/@mazharul.belal/understanding-closures-in-swift-9a418818d452"
-                  target="_blank"
-                  >Read full article</a
-                >
-              </p>
-            </div>
-
-            <div class="article">
-              <img src="images/sc.png" alt="Static vs class variable swift" />
-              <h3>static vs class variable swift</h3>
-              <p>
-                In Swift, we use static and class to define properties and
-                methods that belong to the type itself. This means you canaccess
-                them without creating an instance of the class or struct.
-                <a
-                  href="https://medium.com/@mazharul.belal/static-vs-class-variable-swift-9a887d98f13e"
-                  target="_blank"
-                  >Read full article</a
-                >
-              </p>
-            </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__num" data-count="8" data-suffix="+">0</span>
+            <span class="stat__label">Years experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="10" data-suffix="+">0</span>
+            <span class="stat__label">Apps shipped</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="1" data-suffix="M+">0</span>
+            <span class="stat__label">Users reached</span>
           </div>
         </div>
-        <button id="btn-prev-article" aria-label="Previous Article" disabled>
-        </button>
-        <button id="btn-next-article" aria-label="Next Article">
-        </button>
-      </section> -->
+      </div>
 
-    <section id="hire-me">
-      <h2>Hire me on Upwork</h2>
-      <p>
-        I am committed to delivering high-quality Android applications. If you are looking for a
-        highly experienced and reliable Android developer to bring your app vision to life, please visit my
-        Upwork profile. I am eager to collaborate with you and build exceptional applications.
-      </p>
-      <a href="https://www.upwork.com/freelancers/~01d1695dbde3b01bf1" target="_blank" rel="noopener noreferrer"
-        class="btn-upwork">
-        Visit My Upwork Profile
+      <!-- Phone mockup -->
+      <div class="hero__visual reveal" data-reveal data-reveal-delay="150">
+        <div class="phone" data-tilt>
+          <div class="phone__glow"></div>
+          <div class="phone__notch"></div>
+          <div class="phone__screen">
+            <div class="app-status">
+              <span>9:41</span>
+              <span class="app-status__icons">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M2 17h2v4H2zM6 13h2v8H6zM10 9h2v12h-2zM14 5h2v16h-2zM18 1h2v20h-2z"/></svg>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 4C7 4 2.7 6 0 9l12 15L24 9c-2.7-3-7-5-12-5z"/></svg>
+                <svg viewBox="0 0 24 24" width="16" height="14" fill="currentColor"><rect x="1" y="6" width="18" height="12" rx="2" opacity=".5"/><rect x="3" y="8" width="13" height="8" rx="1"/><rect x="20" y="9" width="2" height="6" rx="1"/></svg>
+              </span>
+            </div>
+            <div class="app-profile">
+              <div class="app-avatar">
+                <img src="monir.png" alt="Monir Hossain" loading="eager" />
+                <span class="app-avatar__ring"></span>
+              </div>
+              <h3>Monir Hossain</h3>
+              <p>Senior Android Engineer</p>
+            </div>
+            <div class="app-metrics">
+              <div><b>8+</b><span>Years</span></div>
+              <div><b>10+</b><span>Apps</span></div>
+              <div><b>1M+</b><span>Users</span></div>
+            </div>
+            <div class="app-chips">
+              <span>Kotlin</span><span>Compose</span><span>MVVM</span>
+              <span>Coroutines</span><span>Hilt</span><span>Flutter</span>
+            </div>
+            <a href="#contact" class="app-cta">Hire me</a>
+          </div>
+        </div>
+
+        <span class="float-badge float-badge--1">{ Kotlin }</span>
+        <span class="float-badge float-badge--2">⚡ Compose</span>
+        <span class="float-badge float-badge--3">◇ Flutter</span>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll down">
+        <span class="mouse"><span></span></span>
       </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__index">01</span>
+        <h2 class="section__title">About <span class="grad-text">me</span></h2>
+      </div>
+
+      <div class="about">
+        <div class="about__text reveal" data-reveal>
+          <p>
+            I'm a flexible, results-driven <strong>Senior Android Engineer</strong> with over
+            8 years of experience designing, developing and optimizing high-performance mobile
+            applications. My passion is delivering seamless user experiences while building
+            scalable, secure software.
+          </p>
+          <p>
+            I've led the development of a GDPR-compliant telehealth app (<strong>eDoktor</strong>)
+            with secure video consultations, contributed to a major eCommerce platform
+            (<strong>Dhamaka Shopping</strong>) with real-time data and payment-gateway
+            integrations, and built SDKs for financial services (<strong>shurjoPay</strong>)
+            and a Learning Management System (<strong>Retina LMS</strong>).
+          </p>
+          <p>
+            My architectural approach leans on <strong>MVVM, Clean Architecture &amp; Modular
+            Design</strong>, always following SOLID principles. Beyond shipping products, I'm an
+            active competitive programmer, sharpening my problem-solving and data-structures muscle
+            on and offline.
+          </p>
+        </div>
+
+        <aside class="about__card reveal" data-reveal data-reveal-delay="120">
+          <div class="terminal">
+            <div class="terminal__bar">
+              <span></span><span></span><span></span>
+              <em>Monir.kt</em>
+            </div>
+            <pre class="terminal__body"><code><span class="t-key">data class</span> <span class="t-type">Engineer</span>(
+  <span class="t-key">val</span> name: <span class="t-type">String</span> = <span class="t-str">"Monir Hossain"</span>,
+  <span class="t-key">val</span> role: <span class="t-type">String</span> = <span class="t-str">"Senior Android Eng."</span>,
+  <span class="t-key">val</span> based: <span class="t-type">String</span> = <span class="t-str">"Remote · Sweden"</span>,
+  <span class="t-key">val</span> stack: <span class="t-type">List</span>&lt;<span class="t-type">String</span>&gt; = <span class="t-fn">listOf</span>(
+    <span class="t-str">"Kotlin"</span>, <span class="t-str">"Compose"</span>, <span class="t-str">"Flutter"</span>
+  ),
+  <span class="t-key">val</span> openToWork: <span class="t-type">Boolean</span> = <span class="t-key">true</span>
+)</code></pre>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__index">02</span>
+        <h2 class="section__title">Tech <span class="grad-text">stack</span></h2>
+        <p class="section__sub">The tools I reach for to ship great mobile experiences.</p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal" data-reveal>
+          <div class="skill-card__icon">📱</div>
+          <h3>Mobile Development</h3>
+          <div class="tags">
+            <span>Android SDK</span><span>Architecture Components</span><span>Jetpack Compose</span>
+            <span>Flutter</span><span>Material Design</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal" data-reveal data-reveal-delay="80">
+          <div class="skill-card__icon">🧩</div>
+          <h3>Libraries &amp; Tools</h3>
+          <div class="tags">
+            <span>Retrofit</span><span>Coroutines</span><span>Flow</span><span>LiveData</span>
+            <span>Room</span><span>Realm</span><span>GraphQL</span><span>WebSocket</span>
+            <span>Dagger</span><span>Hilt</span><span>WorkManager</span><span>CameraX</span>
+            <span>Firebase</span><span>Riverpod</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal" data-reveal data-reveal-delay="160">
+          <div class="skill-card__icon">💾</div>
+          <h3>Data Persistence</h3>
+          <div class="tags">
+            <span>DataStore</span><span>SQLite</span><span>Room</span><span>Realm</span>
+            <span>MySQL</span><span>Firestore</span><span>Realtime DB</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal" data-reveal>
+          <div class="skill-card__icon">⌨️</div>
+          <h3>Languages</h3>
+          <div class="tags">
+            <span>Kotlin</span><span>Java</span><span>Dart</span><span>Python</span>
+            <span>C++</span><span>C</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal" data-reveal data-reveal-delay="80">
+          <div class="skill-card__icon">🏗️</div>
+          <h3>Architecture</h3>
+          <div class="tags">
+            <span>Clean Architecture</span><span>MVVM</span><span>MVI</span>
+            <span>Modular</span><span>SOLID</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal" data-reveal data-reveal-delay="160">
+          <div class="skill-card__icon">🚀</div>
+          <h3>Workflow &amp; CI/CD</h3>
+          <div class="tags">
+            <span>Git</span><span>GitHub Actions</span><span>JUnit</span><span>Espresso</span>
+            <span>Appium</span><span>Scrum</span><span>Jira</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__index">03</span>
+        <h2 class="section__title">Work <span class="grad-text">experience</span></h2>
+        <p class="section__sub">A timeline of the teams and products I've helped build.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="tl-item reveal" data-reveal>
+          <span class="tl-dot"></span>
+          <div class="tl-card" data-tilt>
+            <div class="tl-card__head">
+              <img src="images/northprim.jpeg" alt="Northprim" />
+              <div>
+                <h3>Senior Android Engineer</h3>
+                <p class="tl-company">Northprim · Stockholm, Sweden <span class="tl-remote">Remote</span></p>
+              </div>
+              <span class="tl-period">Jun 2023 — Present</span>
+            </div>
+            <ul>
+              <li>Led development of <strong>eDoktor</strong>, a GDPR-compliant telehealth &amp; well-being app with secure video consultations.</li>
+              <li>Increased user engagement by <strong>80%</strong> through UI/UX improvements, performance tuning and feedback-driven features.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal" data-reveal>
+          <span class="tl-dot"></span>
+          <div class="tl-card" data-tilt>
+            <div class="tl-card__head">
+              <img src="images/durbinLabs.jpeg" alt="Durbin Labs" />
+              <div>
+                <h3>Senior Software Engineer (Android)</h3>
+                <p class="tl-company">Durbin Labs Limited · Dhaka, Bangladesh</p>
+              </div>
+              <span class="tl-period">Feb 2022 — May 2023</span>
+            </div>
+            <ul>
+              <li>Built <strong>Retina LMS</strong>, enabling thousands of students to enroll, study, take exams and track progress.</li>
+              <li>Developed <strong>Doktor Dekhao</strong>, a telemedicine app with consultations, medicine reminders and BMI tracking.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal" data-reveal>
+          <span class="tl-dot"></span>
+          <div class="tl-card" data-tilt>
+            <div class="tl-card__head">
+              <img src="images/shurjomukhi.png" alt="Shurjomukhi" />
+              <div>
+                <h3>Android Developer</h3>
+                <p class="tl-company">Shurjomukhi Limited · Dhaka, Bangladesh</p>
+              </div>
+              <span class="tl-period">Mar 2020 — Jan 2022</span>
+            </div>
+            <ul>
+              <li>Led a team building the <strong>shurjoPay</strong> Android &amp; Flutter SDK, used by thousands of client apps to integrate the payment gateway.</li>
+              <li>Built <strong>Hatekhori</strong>, a COPPA-compliant educational app that's helped <strong>1M+ children</strong> learn the Bangla alphabet.</li>
+              <li>Created <strong>praniSheba</strong>, an IoT cattle-health monitor using ML for unique cow identification.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal" data-reveal>
+          <span class="tl-dot"></span>
+          <div class="tl-card" data-tilt>
+            <div class="tl-card__head">
+              <img src="images/microtrade.webp" alt="Microtrade" />
+              <div>
+                <h3>Android Developer</h3>
+                <p class="tl-company">Microtrade Group · Dhaka, Bangladesh</p>
+              </div>
+              <span class="tl-period">Jan 2018 — Feb 2020</span>
+            </div>
+            <ul>
+              <li>Developed <strong>Buddy</strong>, a ride-sharing app for efficient shared rides.</li>
+              <li>Built <strong>Dhamaka Shopping</strong>, an eCommerce platform serving thousands of users.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="subsection-title reveal" data-reveal>Education</h3>
+      <div class="edu-grid">
+        <article class="edu-card reveal" data-reveal>
+          <img src="images/jahangirnagar.png" alt="Jahangirnagar University" />
+          <div>
+            <h4>M.Sc. in Computer Science &amp; Engineering</h4>
+            <p>Jahangirnagar University</p>
+            <span>Jan 2018 — Apr 2019</span>
+          </div>
+        </article>
+        <article class="edu-card reveal" data-reveal data-reveal-delay="100">
+          <img src="images/northern.jpg" alt="Northern University Bangladesh" />
+          <div>
+            <h4>B.Sc. in Computer Science &amp; Engineering</h4>
+            <p>Northern University Bangladesh</p>
+            <span>Sep 2012 — Aug 2016</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK / APPS -->
+    <section id="work" class="section">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__index">04</span>
+        <h2 class="section__title">Featured <span class="grad-text">apps</span></h2>
+        <p class="section__sub">Products I've designed, built and shipped to real users.</p>
+      </div>
+
+      <div class="apps-grid">
+        <a class="app-card reveal" data-reveal data-tilt
+          href="https://play.google.com/store/apps/details?id=com.edoktor.patient" target="_blank" rel="noopener">
+          <div class="app-card__icon"><img src="images/Apps/edoktor-full.png" alt="eDoktor" /></div>
+          <h3>eDoktor</h3>
+          <p>GDPR-compliant telehealth &amp; well-being app providing secure video consultations.</p>
+          <span class="app-card__link">Google Play <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+
+        <a class="app-card reveal" data-reveal data-tilt
+          href="https://play.google.com/store/apps/details?id=com.retinalms" target="_blank" rel="noopener">
+          <div class="app-card__icon"><img src="images/Apps/retina.jpeg" alt="Retina LMS" /></div>
+          <h3>Retina LMS</h3>
+          <p>Learning platform preparing students for medical &amp; dental admission tests.</p>
+          <span class="app-card__link">Google Play <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+
+        <a class="app-card reveal" data-reveal data-tilt
+          href="https://www.facebook.com/doctordekhao/" target="_blank" rel="noopener">
+          <div class="app-card__icon"><img src="images/Apps/dd.png" alt="Doctor Dekhao" /></div>
+          <h3>Doctor Dekhao</h3>
+          <p>Healthcare platform connecting patients with certified doctors, anywhere.</p>
+          <span class="app-card__link">Visit <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+
+        <a class="app-card reveal" data-reveal data-tilt
+          href="https://shurjopay.com.bd" target="_blank" rel="noopener">
+          <div class="app-card__icon"><img src="images/Apps/shurjopay.jpeg" alt="ShurjoPay" /></div>
+          <h3>ShurjoPay</h3>
+          <p>Bangladesh's first online payment gateway, connecting banks to platforms.</p>
+          <span class="app-card__link">Visit <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+
+        <a class="app-card reveal" data-reveal data-tilt
+          href="https://www.facebook.com/hatekhoriapp/" target="_blank" rel="noopener">
+          <div class="app-card__icon"><img src="images/Apps/hatekhori.png" alt="Hatekhori" /></div>
+          <h3>Hatekhori</h3>
+          <p>Educational app helping 1M+ children learn the Bangla alphabet interactively.</p>
+          <span class="app-card__link">Visit <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+
+        <a class="app-card reveal" data-reveal data-tilt
+          href="https://www.pranisheba.com.bd" target="_blank" rel="noopener">
+          <div class="app-card__icon"><img src="images/Apps/pranisheba.png" alt="PraniSheba" /></div>
+          <h3>PraniSheba</h3>
+          <p>IoT cattle-health monitoring using machine learning to identify cows.</p>
+          <span class="app-card__link">Visit <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+
+        <a class="app-card reveal" data-reveal data-tilt
+          href="https://www.facebook.com/buddyrideshare/" target="_blank" rel="noopener">
+          <div class="app-card__icon"><img src="images/Apps/buddy.png" alt="Buddy" /></div>
+          <h3>Buddy</h3>
+          <p>Ride-sharing app enabling multiple users to share rides conveniently.</p>
+          <span class="app-card__link">Visit <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+
+        <a class="app-card reveal" data-reveal data-tilt
+          href="https://www.facebook.com/DhamakaOfficial/" target="_blank" rel="noopener">
+          <div class="app-card__icon"><img src="images/Apps/dhamaka.png" alt="Dhamaka" /></div>
+          <h3>Dhamaka</h3>
+          <p>eCommerce platform offering a wide range of products at exclusive discounts.</p>
+          <span class="app-card__link">Visit <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+
+        <a class="app-card reveal" data-reveal data-tilt
+          href="https://www.facebook.com/tripuptech" target="_blank" rel="noopener">
+          <div class="app-card__icon"><img src="images/Apps/tripup.jpg" alt="TripUp" /></div>
+          <h3>TripUp</h3>
+          <p>Short-term rentals for rooms, flats, hotels, resorts and boats.</p>
+          <span class="app-card__link">Visit <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+
+        <a class="app-card reveal" data-reveal data-tilt
+          href="https://play.google.com/store/apps/details?id=com.monir.expensetracker" target="_blank" rel="noopener">
+          <div class="app-card__icon"><img src="images/Apps/eexpense.png" alt="eExpense" /></div>
+          <h3>eExpense</h3>
+          <p>User-friendly app that simplifies tracking your daily expenses.</p>
+          <span class="app-card__link">Google Play <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- HIRE / CTA -->
+    <section class="cta-banner reveal" data-reveal>
+      <div class="cta-banner__inner">
+        <h2>Let's build your next <span class="grad-text">mobile app</span></h2>
+        <p>
+          Looking for a reliable, experienced Android developer to bring your app vision to life?
+          I'm available on Upwork and ready to collaborate.
+        </p>
+        <a href="https://www.upwork.com/freelancers/~01d1695dbde3b01bf1" target="_blank" rel="noopener"
+          class="btn btn--primary btn--lg">
+          Visit my Upwork profile
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <!-- <section id="contact-section"> -->
-      <h2>Contact</h2>
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact" class="footer">
+    <div class="footer__inner reveal" data-reveal>
+      <span class="section__index">05</span>
+      <h2 class="footer__title">Get in <span class="grad-text">touch</span></h2>
+      <p class="footer__sub">
+        Have a project in mind or just want to say hi? My inbox is always open.
+      </p>
+
       <div class="contact-links">
-        <a href="mailto:mknishad1@ymail.com" class="contact-link" target="_blank" rel="noopener">
-          <img src="images/Apps/mail.png" alt="Email Icon" />
+        <a href="mailto:mknishad1@ymail.com" class="contact-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
           <span>Email</span>
         </a>
-        <a href="https://wa.me/8801670745042" class="contact-link" target="_blank" rel="noopener">
-          <img src="images/Apps/whatsapp.png" alt="WhatsApp Icon" />
+        <a href="https://wa.me/8801670745042" target="_blank" rel="noopener" class="contact-link" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.13c-.25.69-1.45 1.32-1.99 1.36-.53.05-1.03.24-3.47-.72-2.92-1.15-4.78-4.13-4.93-4.32-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.59-.36.78-.36l.56.01c.18 0 .42-.07.66.5.25.59.84 2.04.91 2.19.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.62 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.12.63-.07.17-.19.73-.85.92-1.14.19-.29.39-.24.66-.15.27.1 1.71.81 2 .96.29.15.49.22.56.34.07.12.07.71-.18 1.4z"/></svg>
           <span>WhatsApp</span>
         </a>
-        <a href="https://www.linkedin.com/in/mknishad/" class="contact-link" target="_blank" rel="noopener">
-          <img src="images/Apps/linkedin.png" alt="LinkedIn Icon" />
+        <a href="https://www.linkedin.com/in/mknishad/" target="_blank" rel="noopener" class="contact-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
           <span>LinkedIn</span>
         </a>
-        <a href="https://github.com/mknishad" class="contact-link" target="_blank" rel="noopener">
-          <img src="images/Apps/github.png" alt="GitHub Icon" />
+        <a href="https://github.com/mknishad" target="_blank" rel="noopener" class="contact-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
           <span>GitHub</span>
         </a>
-        <a href="https://leetcode.com/u/mknishad/" class="contact-link" target="_blank" rel="noopener">
-          <img src="images/Apps/leetcode.webp" alt="LeetCode Icon" />
+        <a href="https://leetcode.com/u/mknishad/" target="_blank" rel="noopener" class="contact-link" aria-label="LeetCode">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M13.48 0a1.4 1.4 0 0 0-.98.42L4.07 8.99a2.83 2.83 0 0 0 0 3.91l4.13 4.18a1.4 1.4 0 0 0 1.99-1.97l-4.13-4.18a.04.04 0 0 1 0-.06l8.42-8.56a1.4 1.4 0 0 0-.99-2.39zm-1.4 6.55a1.4 1.4 0 0 0-.99 2.39l1.97 1.99-1.97 1.99a1.4 1.4 0 1 0 1.99 1.97l2.95-2.98a1.4 1.4 0 0 0 0-1.97l-2.95-2.98a1.4 1.4 0 0 0-1-.41zM9.13 16.5a1.4 1.4 0 0 0 0 2.8h11.18a1.4 1.4 0 0 0 0-2.8H9.13z"/></svg>
           <span>LeetCode</span>
         </a>
-        <a href="https://www.hackerrank.com/profile/mknishad" class="contact-link" target="_blank" rel="noopener">
-          <img src="images/Apps/hackerrank.png" alt="HackerRank Icon" />
-          <span>HackerRank</span>
-        </a>
-        <a href="https://codeforces.com/profile/mknishad" class="contact-link" target="_blank" rel="noopener">
-          <img src="images/Apps/codeforces.png" alt="Codeforces Icon" />
+        <a href="https://codeforces.com/profile/mknishad" target="_blank" rel="noopener" class="contact-link" aria-label="Codeforces">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4.5 7.5A1.5 1.5 0 0 1 6 9v9a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 0 18V9a1.5 1.5 0 0 1 1.5-1.5h3zm9-4.5A1.5 1.5 0 0 1 15 4.5v13.5a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5V4.5A1.5 1.5 0 0 1 10.5 3h3zm9 6a1.5 1.5 0 0 1 1.5 1.5v7.5a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5V10.5A1.5 1.5 0 0 1 19.5 9h3z"/></svg>
           <span>Codeforces</span>
         </a>
       </div>
-      <p class="copyright">&copy; 2025 Monir Hossain</p>
-    <!-- </section> -->
+
+      <p class="copyright">
+        Designed &amp; built by Monir Hossain · <span id="year">2026</span>
+      </p>
+    </div>
   </footer>
 
-  <!-- <script src="js/articles-slider.js" defer></script> -->
+  <script src="main.js" defer></script>
 </body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
 
 </html>
