@@ -93,7 +93,7 @@
       "Android apps.",
       "with Jetpack Compose.",
       "in Kotlin.",
-      "cross-platform with Flutter.",
+      "cross-platform apps with KMP and Flutter.",
       "scalable mobile products.",
     ];
     let w = 0, c = 0, deleting = false;

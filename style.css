@@ -56,6 +56,9 @@
   --text-dim: #4a4d66;
   --text-faint: #7c7f96;
   --shadow-md: 0 24px 60px -30px rgba(20, 30, 60, 0.4);
+  /* deeper, higher-contrast accents so colorful text reads on a light bg */
+  --green: #0a8f4d;
+  --grad-text: linear-gradient(110deg, #0a8f4d 0%, #0891b2 45%, #7c3aed 100%);
 }
 
 /* ---------- base ---------- */
@@ -581,6 +584,9 @@ main { display: block; }
 .float-badge--1 { top: 12%; left: -4%;  color: var(--green);  animation: bob 6s ease-in-out infinite; }
 .float-badge--2 { top: 42%; right: -8%; color: var(--cyan);   animation: bob 7s ease-in-out infinite 0.6s; }
 .float-badge--3 { bottom: 12%; left: 2%; color: var(--purple); animation: bob 5.5s ease-in-out infinite 1.2s; }
+.float-badge--4 { bottom: 30%; right: -4%; color: var(--pink); animation: bob 6.5s ease-in-out infinite 0.3s; }
+/* deeper cyan so the Compose badge reads on a light bg */
+[data-theme="light"] .float-badge--2 { color: #0891b2; }
 @keyframes bob { 50% { transform: translateY(-14px); } }
 
 .scroll-hint {
